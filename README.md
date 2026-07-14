@@ -221,6 +221,8 @@ python3 "$SW/scripts/sw_tool.py" report --world "$WORLD" \
 ```
 scroll-world/
 ├── SKILL.md                # 技能入口（frontmatter + 操作总纲）
+├── README.md               # 本文件：安装 + 供应商 + 使用说明
+├── LICENSE                 # MIT
 ├── agents/openai.yaml      # Codex 接口清单（Claude Code/CodeBuddy 忽略）
 ├── scripts/                # 编排 / 供应商适配 / QA / 构建（纯 Python 标准库）
 │   ├── scroll-world.py     #   主状态机：setup/init/themes/doctor/plan/run/approve/retry/status
@@ -233,6 +235,8 @@ scroll-world/
 ├── references/             # 按需读取：pipeline / 供应商能力 / prompts / themes / quality / gotchas
 ├── assets/                 # 主题目录 + world.example.json
 ├── evals/  tests/          # 触发用例 + 单元测试
+└── example/                # 可直接测试的成品示例
+    └── xr-cool-vr/         #   XR COOL 滚动 3D 落地页（双击 index.html 即测）
 ```
 
 ---
