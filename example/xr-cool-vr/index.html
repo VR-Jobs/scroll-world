@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F8FAFD" />
+  <title>XR COOL — 进入现实的另一面</title>
+  <meta name="description" content="XR COOL 轻量 VR 眼镜：以低多边形光学世界，呈现显示、空间感知与轻量结构。" />
+  <link rel="preload" as="image" href="assets/anchor-hero.jpg" fetchpriority="high" />
+  <link rel="stylesheet" href="xrcool.css" />
+</head>
+<body>
+  <div id="top"></div>
+  <div class="xrcool-hud" aria-hidden="true">
+    <span>OPTICAL FIELD</span>
+    <i></i>
+    <span>120°</span>
+  </div>
+
+  <main id="world">
+    <section data-sw-seo>
+      <h1>看见，未曾抵达的世界。</h1>
+      <p>一副轻盈的眼镜，把空间、光线与想象叠成一个可以走进去的现实。</p>
+      <h2>每一束光，都为沉浸而生。</h2>
+      <p>双目光学与高密度显示在眼前汇合，让细节保持清晰，让世界自然展开。</p>
+      <h2>空间，理解你的每个动作。</h2>
+      <p>多向传感器持续读取房间与姿态，让视线和动作同步落在正确的位置。</p>
+      <h2>轻盈，直到忘记设备存在。</h2>
+      <p>平衡配重与贴合结构分散压力，让更长时间的探索依然自然。</p>
+      <h2>进入 XR COOL。</h2>
+      <p>戴上它，让下一层现实从一束蓝光开始。</p>
+      <p><a href="#experience">预约体验</a> · <a href="#specs">查看规格</a></p>
+    </section>
+  </main>
+
+  <footer class="xrcool-footer" id="specs">
+    <div class="xrcool-footer__intro">
+      <span>XR COOL / SYSTEM 01</span>
+      <h2>为下一层现实而设计。</h2>
+    </div>
+    <dl class="xrcool-specs">
+      <div><dt>显示</dt><dd>双目高密度光学</dd></div>
+      <div><dt>追踪</dt><dd>6DoF 空间感知</dd></div>
+      <div><dt>结构</dt><dd>平衡式轻量机身</dd></div>
+    </dl>
+    <div class="xrcool-footer__cta" id="experience">
+      <span>体验预约即将开放</span>
+      <a href="#top">重新进入世界</a>
+    </div>
+  </footer>
+
+  <script src="scrub-engine.js"></script>
+  <script>
+    mountScrollWorld(document.getElementById('world'), {
+      // Keep this page portable for file:// double-click and static hosting.
+      directVideo: true,
+      brand: { name: 'XR COOL', href: '#top' },
+      cta: { label: '查看规格', href: '#specs' },
+      hint: '滚动进入',
+      nav: true,
+      atmosphere: true,
+      diveScroll: 1.65,
+      crossfade: 0.08,
+      scrollMobileFactor: 1.35,
+      sections: [
+        {
+          id: 'vision', label: 'VISION',
+          still: 'assets/anchor-hero.jpg',
+          poster: 'assets/poster-final-hero.webp',
+          clip: 'assets/vid/final-hero.mp4',
+          clipMobile: 'assets/vid/final-hero-m.mp4',
+          posterMobile: 'assets/poster-final-hero-m.webp',
+          accent: '#246BFD',
+          scroll: 1.9,
+          linger: 0.18,
+          eyebrow: 'XR COOL / 进入现实的另一面',
+          title: '看见，未曾抵达的世界。',
+          body: '一副轻盈的眼镜，把空间、光线与想象叠成一个可以走进去的现实。',
+          tags: ['LOW-POLY VISION', 'ALL-IN-ONE']
+        },
+        {
+          id: 'optics', label: 'OPTICS',
+          still: 'assets/still-optics.jpg',
+          poster: 'assets/poster-final-optics.webp',
+          clip: 'assets/vid/final-optics.mp4',
+          clipMobile: 'assets/vid/final-optics-m.mp4',
+          posterMobile: 'assets/poster-final-optics-m.webp',
+          accent: '#246BFD',
+          linger: 0.28,
+          eyebrow: '光学显示',
+          title: '每一束光，都为沉浸而生。',
+          body: '双目光学与高密度显示在眼前汇合，让细节保持清晰，让世界自然展开。',
+          tags: ['双目光学', '低延迟显示']
+        },
+        {
+          id: 'tracking', label: 'TRACKING',
+          still: 'assets/still-tracking.jpg',
+          poster: 'assets/poster-final-tracking.webp',
+          clip: 'assets/vid/final-tracking.mp4',
+          clipMobile: 'assets/vid/final-tracking-m.mp4',
+          posterMobile: 'assets/poster-final-tracking-m.webp',
+          accent: '#3979FF',
+          linger: 0.25,
+          eyebrow: '空间感知',
+          title: '空间，理解你的每个动作。',
+          body: '多向传感器持续读取房间与姿态，让视线和动作同步落在正确的位置。',
+          tags: ['6DoF', '空间追踪']
+        },
+        {
+          id: 'comfort', label: 'COMFORT',
+          still: 'assets/still-comfort.jpg',
+          poster: 'assets/poster-final-comfort.webp',
+          clip: 'assets/vid/final-comfort.mp4',
+          clipMobile: 'assets/vid/final-comfort-m.mp4',
+          posterMobile: 'assets/poster-final-comfort-m.webp',
+          accent: '#5B8DFF',
+          linger: 0.3,
+          eyebrow: '轻量结构',
+          title: '轻盈，直到忘记设备存在。',
+          body: '平衡配重与贴合结构分散压力，让更长时间的探索依然自然。',
+          tags: ['平衡配重', '柔性贴合']
+        },
+        {
+          id: 'beyond', label: 'BEYOND',
+          still: 'assets/still-beyond.jpg',
+          poster: 'assets/poster-final-beyond.webp',
+          clip: 'assets/vid/final-beyond.mp4',
+          clipMobile: 'assets/vid/final-beyond-m.mp4',
+          posterMobile: 'assets/poster-final-beyond-m.webp',
+          accent: '#1760FF',
+          scroll: 1.9,
+          linger: 0.2,
+          eyebrow: 'XR COOL WORLD',
+          title: '进入 XR COOL。',
+          body: '戴上它，让下一层现实从一束蓝光开始。',
+          tags: [],
+          cta: {
+            primary: { label: '预约体验', href: '#experience' },
+            secondary: { label: '查看规格', href: '#specs' }
+          }
+        }
+      ],
+      connectors: [],
+      connectorsMobile: []
+    });
+  </script>
+</body>
+</html>

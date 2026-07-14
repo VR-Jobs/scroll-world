@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "entry": "index.html",
+  "supported_launch_modes": [
+    "file:// double-click",
+    "http://",
+    "https://"
+  ],
+  "direct_video": true,
+  "resource_count": 28,
+  "resources": [
+    "index.html",
+    "assets/anchor-hero.jpg",
+    "assets/poster-final-beyond-m.webp",
+    "assets/poster-final-beyond.webp",
+    "assets/poster-final-comfort-m.webp",
+    "assets/poster-final-comfort.webp",
+    "assets/poster-final-hero-m.webp",
+    "assets/poster-final-hero.webp",
+    "assets/poster-final-optics-m.webp",
+    "assets/poster-final-optics.webp",
+    "assets/poster-final-tracking-m.webp",
+    "assets/poster-final-tracking.webp",
+    "assets/still-beyond.jpg",
+    "assets/still-comfort.jpg",
+    "assets/still-optics.jpg",
+    "assets/still-tracking.jpg",
+    "assets/vid/final-beyond-m.mp4",
+    "assets/vid/final-beyond.mp4",
+    "assets/vid/final-comfort-m.mp4",
+    "assets/vid/final-comfort.mp4",
+    "assets/vid/final-hero-m.mp4",
+    "assets/vid/final-hero.mp4",
+    "assets/vid/final-optics-m.mp4",
+    "assets/vid/final-optics.mp4",
+    "assets/vid/final-tracking-m.mp4",
+    "assets/vid/final-tracking.mp4",
+    "xrcool.css",
+    "scrub-engine.js"
+  ],
+  "video_probes": [
+    {
+      "path": "assets/vid/final-beyond-m.mp4",
+      "codec": "h264",
+      "pixel_format": "yuvj420p",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-beyond.mp4",
+      "codec": "h264",
+      "pixel_format": "yuvj420p",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-comfort-m.mp4",
+      "codec": "h264",
+      "pixel_format": "yuvj420p",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-comfort.mp4",
+      "codec": "h264",
+      "pixel_format": "yuvj420p",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-hero-m.mp4",
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-hero.mp4",
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-optics-m.mp4",
+      "codec": "h264",
+      "pixel_format": "yuvj420p",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-optics.mp4",
+      "codec": "h264",
+      "pixel_format": "yuvj420p",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-tracking-m.mp4",
+      "codec": "h264",
+      "pixel_format": "yuvj420p",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    },
+    {
+      "path": "assets/vid/final-tracking.mp4",
+      "codec": "h264",
+      "pixel_format": "yuvj420p",
+      "width": 1920,
+      "height": 1080,
+      "duration_seconds": 5.041667,
+      "status": "pass"
+    }
+  ],
+  "errors": []
+}
