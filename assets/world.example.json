@@ -1,0 +1,146 @@
+{
+  "$schema": "../references/world.schema.json",
+  "schema_version": 2,
+  "project": {
+    "brand": "MANIFEST",
+    "provider": "doubao",
+    "workflow_mode": "detailed",
+    "theme": "low-poly-clay",
+    "architecture": "A",
+    "generation_limit": 20,
+    "currency": "CNY"
+  },
+  "design": {
+    "label": "Low-poly Clay",
+    "style_prompt": "soft matte low-poly clay diorama, simplified geometry, tactile rounded edges, calm studio lighting",
+    "palette": ["#F7F9FC", "#DCE7F5", "#4E8EF7", "#173B67", "#101820"],
+    "material": "matte clay with restrained satin highlights",
+    "typography": "clean geometric sans serif",
+    "motion": "slow forward dolly with gentle parallax",
+    "text_strategy": "DOM or SVG overlay for exact brand spelling"
+  },
+  "models": {
+    "image": "seedream-5-pro",
+    "video_preview": "preview",
+    "video_final": "final"
+  },
+  "pricing": {
+    "source_url": null,
+    "captured_at": null,
+    "currency": "CNY",
+    "image": {
+      "billing_unit": "output",
+      "cny_per_output": null,
+      "cny_per_million_output_tokens": null
+    },
+    "video": {
+      "preview": {"cny_per_million_tokens": null},
+      "final": {"cny_per_million_tokens": null}
+    },
+    "higgsfield": {
+      "billing_unit": "credits",
+      "cny_per_credit": null
+    },
+    "codex": {
+      "billing_mode": "unknown",
+      "model": null,
+      "cny_per_million_input_tokens": null,
+      "cny_per_million_cached_input_tokens": null,
+      "cny_per_million_output_tokens": null
+    }
+  },
+  "generation": {
+    "ratio": "16:9",
+    "duration_seconds": 5,
+    "preview_enabled": true,
+    "image_size": "2K"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "still_prompt": "prompts/still-hero.txt",
+      "video_prompt": "prompts/video-hero.txt",
+      "reference_images": [],
+      "outputs": {
+        "still": "assets/anchor-hero.jpg",
+        "raw_preview": "assets/raw-preview-hero.mp4",
+        "preview_last_frame": "assets/raw-preview-hero-last.png",
+        "raw_final": "assets/raw-final-hero.mp4",
+        "final_last_frame": "assets/raw-final-hero-last.png",
+        "final_video": "assets/vid/final-hero.mp4",
+        "mobile_video": "assets/vid/final-hero-m.mp4",
+        "poster": "assets/poster-final-hero.webp",
+        "mobile_poster": "assets/poster-final-hero-m.webp"
+      },
+      "qa": {
+        "must_include": ["单一蓝白 VR 眼镜主体", "low-poly clay 材质"],
+        "must_not_include": ["人物", "座椅", "文字", "第二副眼镜"]
+      }
+    },
+    {
+      "id": "optics",
+      "label": "Optics",
+      "still_prompt": "prompts/still-optics.txt",
+      "video_prompt": "prompts/video-optics.txt",
+      "reference_images": [],
+      "outputs": {
+        "still": "assets/still-optics.jpg",
+        "raw_preview": "assets/raw-preview-optics.mp4",
+        "preview_last_frame": "assets/raw-preview-optics-last.png",
+        "raw_final": "assets/raw-final-optics.mp4",
+        "final_last_frame": "assets/raw-final-optics-last.png",
+        "final_video": "assets/vid/final-optics.mp4",
+        "mobile_video": "assets/vid/final-optics-m.mp4",
+        "poster": "assets/poster-final-optics.webp",
+        "mobile_poster": "assets/poster-final-optics-m.webp"
+      },
+      "qa": {
+        "must_include": ["光学镜片", "同一蓝白 low-poly 世界"],
+        "must_not_include": ["人物", "文字", "真实摄影风格"]
+      }
+    }
+  ],
+  "transitions": [],
+  "quality": {
+    "seam_fail_below": 0.75,
+    "seam_warn_below": 0.9,
+    "require_semantic_approval": true,
+    "require_browser_qa": true,
+    "still_alignment_warn_below": 0.65,
+    "motion_jump_warn_ratio": 2.5
+  },
+  "delivery": {
+    "output_dir": "dist",
+    "portable": {
+      "entry": "index.html",
+      "direct_video": true,
+      "require_relative_assets": true
+    },
+    "initial_files": [
+      "index.html",
+      "manifest.css",
+      "scrub-engine.js",
+      "assets/poster-final-hero.webp",
+      "assets/poster-final-hero-m.webp"
+    ],
+    "public_files": [
+      "index.html",
+      "manifest.css",
+      "scrub-engine.js",
+      "assets/vid/final-hero.mp4",
+      "assets/vid/final-hero-m.mp4",
+      "assets/poster-final-hero.webp",
+      "assets/poster-final-hero-m.webp",
+      "assets/vid/final-optics.mp4",
+      "assets/vid/final-optics-m.mp4",
+      "assets/poster-final-optics.webp",
+      "assets/poster-final-optics-m.webp"
+    ],
+    "budgets": {
+      "max_total_mb": 120,
+      "max_single_video_mb": 24,
+      "max_initial_mb": 12
+    }
+  }
+}

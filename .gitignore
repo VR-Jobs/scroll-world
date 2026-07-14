@@ -1,0 +1,18 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+
+# Scroll World runtime / secrets — never commit
+.work/
+usage-ledger.json
+cost-report.json
+.env
+.env.*
+*.key
+
+# OS cruft
+.DS_Store
+Thumbs.db

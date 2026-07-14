@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scroll World"
+  short_description: "制作豆包或Higgsfield双供应商滚动3D电影网站与本地云端可移植交付"
+  default_prompt: "Use $scroll-world to build a portable scroll-driven 3D cinematic website with provider, workflow, and theme selection."

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "themes": {
+    "low-poly-clay": {
+      "label": "Low-poly Clay",
+      "style_prompt": "soft matte low-poly clay diorama, simplified geometry, tactile rounded edges, calm studio lighting",
+      "palette": ["#F7F9FC", "#DCE7F5", "#4E8EF7", "#173B67", "#101820"],
+      "material": "matte clay with restrained satin highlights",
+      "typography": "clean geometric sans serif",
+      "motion": "slow forward dolly with gentle parallax",
+      "text_strategy": "DOM or SVG overlay for exact brand spelling"
+    },
+    "chrome-futurism": {
+      "label": "Chrome Futurism",
+      "style_prompt": "polished chrome futurism, liquid metal surfaces, deep cobalt reflections, high-contrast white light, precise industrial forms",
+      "palette": ["#F8FBFF", "#C8D2E0", "#2E6BFF", "#07172F", "#05070B"],
+      "material": "mirror chrome, brushed aluminium and optical glass",
+      "typography": "wide neo-grotesk sans serif",
+      "motion": "controlled orbital glide with crisp light sweeps",
+      "text_strategy": "GLB or DOM overlay; never rely on generated lettering"
+    },
+    "editorial-brutalism": {
+      "label": "Editorial Brutalism",
+      "style_prompt": "editorial brutalism, monumental graphic planes, hard crops, raw paper and concrete texture, sharp asymmetric composition",
+      "palette": ["#FFFFFF", "#E6E6E6", "#0057FF", "#111111", "#000000"],
+      "material": "paper, ink, concrete and flat emissive color",
+      "typography": "condensed display grotesk with oversized hierarchy",
+      "motion": "direct linear pushes and graphic match cuts",
+      "text_strategy": "HTML typography is the primary visual layer"
+    },
+    "glass-laboratory": {
+      "label": "Glass Laboratory",
+      "style_prompt": "sterile glass laboratory, translucent optical volumes, white cyclorama, pale blue caustics, precise scientific atmosphere",
+      "palette": ["#FFFFFF", "#EEF5FA", "#B9DBF2", "#3C8DC5", "#102B3F"],
+      "material": "frosted glass, clear acrylic and ceramic white",
+      "typography": "humanist technical sans serif",
+      "motion": "macro inspection moves with shallow depth transitions",
+      "text_strategy": "SVG labels and DOM data annotations"
+    },
+    "cosmic-ritual": {
+      "label": "Cosmic Ritual",
+      "style_prompt": "cosmic ritual world, midnight void, luminous blue symbols, obsidian monuments, restrained mysticism and volumetric haze",
+      "palette": ["#EAF3FF", "#6EA8FF", "#244F9E", "#11182A", "#03050B"],
+      "material": "obsidian, iridescent mineral and cold emissive light",
+      "typography": "high-contrast serif paired with neutral sans serif",
+      "motion": "slow ceremonial descent and weightless forward drift",
+      "text_strategy": "precise DOM/SVG sigils; generated texture only for non-linguistic marks"
+    },
+    "architectural-white": {
+      "label": "Architectural White",
+      "style_prompt": "minimal architectural white world, museum-scale spaces, soft daylight, pale grey shadows, exact blue wayfinding accents",
+      "palette": ["#FFFFFF", "#F1F3F5", "#D1D7DE", "#3979E8", "#14191F"],
+      "material": "plaster, limestone, anodized aluminium and clear glass",
+      "typography": "Swiss grotesk with disciplined grid alignment",
+      "motion": "steady architectural walkthrough with long sightlines",
+      "text_strategy": "DOM or SVG signage aligned to scene perspective"
+    }
+  }
+}

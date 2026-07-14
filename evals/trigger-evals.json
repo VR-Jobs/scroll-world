@@ -1,0 +1,22 @@
+[
+  {"query": "帮我做一个滚动进入五个 low-poly 3D 场景的品牌官网", "should_trigger": true},
+  {"query": "想做 Apple 产品页那种滚动控制电影镜头的网站", "should_trigger": true},
+  {"query": "用 Seedream 和 Seedance 做连续穿越的网页世界", "should_trigger": true},
+  {"query": "Build a scroll-driven cinematic diorama landing page", "should_trigger": true},
+  {"query": "滚动时从一个微缩岛飞到下一个岛，需要 connector", "should_trigger": true},
+  {"query": "做一个产品穿越页，视频时间跟随 scroll progress", "should_trigger": true},
+  {"query": "用豆包生成场景和首尾相接的视频，再装进网页", "should_trigger": true},
+  {"query": "我需要 low-poly clay 3D 世界滚动官网和移动版视频", "should_trigger": true},
+  {"query": "续跑上次中断的 scroll-world Seedance 链", "should_trigger": true},
+  {"query": "生成一个滚动叙事网站，最后统计 AI 图片视频成本", "should_trigger": true},
+  {"query": "做一个真正可戴头显进入的 WebXR VR 展厅", "should_trigger": false},
+  {"query": "用 Three.js 做鼠标自由旋转的 3D 鞋子配置器", "should_trigger": false},
+  {"query": "帮我剪辑一段普通产品宣传视频", "should_trigger": false},
+  {"query": "生成一张 low-poly 海报", "should_trigger": false},
+  {"query": "写一个普通企业官网，不需要视频或 3D", "should_trigger": false},
+  {"query": "修复 React 页面里的滚动条样式", "should_trigger": false},
+  {"query": "在 Blender 里建一个完整城市模型", "should_trigger": false},
+  {"query": "解释 Seedance API 的认证方式", "should_trigger": false},
+  {"query": "给 MP4 加字幕和背景音乐", "should_trigger": false},
+  {"query": "做一个 WebXR 化学实验，可抓取烧杯", "should_trigger": false}
+]

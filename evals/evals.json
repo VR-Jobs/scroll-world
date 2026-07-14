@@ -1,0 +1,124 @@
+{
+  "skill_name": "scroll-world",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "为一家叫 AURORA 的智能耳机品牌做 5 场 low-poly 滚动 3D 世界，预算上限 20 次，要求先预演再正式生成，并在最后报告豆包图片、视频和 Codex 成本。",
+      "expected_output": "建立 world.json，给出 15 次基础生成与 5 次重试预留，使用 Seedream 锚点门禁、Seedance mini/final 双链、实际尾帧续接、语义 QA、生产白名单和 COSTS.md。",
+      "files": [],
+      "expectations": [
+        "输出明确计算 5 图片 + 5 mini + 5 final = 15 次，并保留 5 次重试。",
+        "在批量图片前设置 Seedream 首图风格审批；全部图片完成后再次让用户逐张验收，批准整批后才进入视频。",
+        "最终交付包含 AI 图片、preview/final 视频 token、Codex 计费模式与总额/缺失原因。",
+        "使用 world.json 与 usage-ledger，而不是手工口头累计次数。",
+        "最终 output_dir 可直接双击 index.html，也能保持原目录上传到静态服务器。"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我有四张场景图，想做一个滚动时像摄影机从一个微缩岛飞到下一个岛的网页，连接镜头必须平滑，手机也要流畅。",
+      "expected_output": "识别为架构 B，规划 dives/connectors，以真实 dive 尾帧和下一 dive 实际首帧作为 connector 端点，验证 SSIM，生成移动 H.264 编码和浏览器回退。",
+      "files": [],
+      "expectations": [
+        "选择架构 B，并为 4 个 dives 规划 3 个 connectors。",
+        "connector 端点使用当前 dive 真实尾帧和下一 dive 实际视频首帧。",
+        "执行编码后全链 SSIM，并把低于 0.75 的接缝判为失败。",
+        "生成 720p H.264 移动版并保留 poster/reduced-motion/data-saver 回退。"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "继续上次中断的 Seedance 正式链，不能重复扣费；其中 optics 场景产品变形了，需要只重做这一段并重新检查成本和接缝。",
+      "expected_output": "读取 task ID、fingerprint 和 usage ledger；不盲目重提 queued/running 任务；显式归档并 retry optics，保留旧生成计数，重新跑全链 SSIM/语义 QA 与成本报告。",
+      "files": [],
+      "expectations": [
+        "先检查保存的 task ID/status/fingerprint，不对 queued/running 任务重复提交。",
+        "旧 optics 请求保留在 usage-ledger 中，重试新增一次实际生成而不是覆盖次数。",
+        "重做后重新检查 optics 前后相关接缝及全链语义 QA。",
+        "更新 COSTS.md；缺少 Codex token 或价格快照时明确写不可得而不猜测。"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "最终网站不要依赖 localhost 或本地服务器。我需要把整个文件夹拷到另一台电脑后双击 index.html 就能看到滚动视频；以后把同一文件夹上传到云服务器也不能改路径。",
+      "expected_output": "生成本地/云端同包的静态目录，使用普通脚本、directVideo 和相对资源，生产构建强制验证引用闭包与 H.264 视频，并留下 portable-report.json。",
+      "files": [],
+      "expectations": [
+        "index.html 明确设置 directVideo: true，file:// 下不依赖 fetch/Blob 或服务端路由。",
+        "HTML、CSS、JS、图片和视频都在同一交付目录内并使用相对路径。",
+        "拒绝 /assets 根路径、localhost、用户目录绝对路径、ES module 和 Service Worker。",
+        "生产构建运行 verify-portable.py，portable-report.json 为 pass 后才称完成。"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "做图时先给我看第一张确认整体 low-poly 风格。第一张没问题再继续全部场景图；全部图做完再给我统一检查。如果我说 optics 那张镜片不对，只重做 optics，重新确认后才能开始生成视频。",
+      "expected_output": "状态机先停在 anchor 门禁，再停在 images 整批门禁；目标场景可单独 retry，图片指纹变化使旧整批批准失效，视频任务只有在新整批批准后才能提交。",
+      "files": [],
+      "expectations": [
+        "首张图生成后暂停并要求用户确认风格、配色、材质、构图和产品准确性。",
+        "全部场景图生成后再次暂停，逐张展示并要求用户明确批准整批。",
+        "用户点名 optics 时只修改并重生成 optics，保留其他已通过图片和实际成本记录。",
+        "单图重试撤销 images/preview 批准；重新批准整批前不提交任何视频任务。"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "给 NOVA 做一个 5 场蓝白 low-poly 滚动产品网站，20 次生成额度。",
+      "expected_output": "创建文件或调用生成 API 前先让用户选择详细版本或快速版本；选择结果写入 world.json，并按对应状态机与预算执行。",
+      "files": [],
+      "expectations": [
+        "明确给出详细版本（推荐）与快速版本两个互斥选项，说明中间审批、视频清晰度、请求次数与适用场景。",
+        "详细版 5 场架构 A 预算为 5 图片 + 5 mini + 5 final = 15 次；快速版为 5 图片 + 5 final = 10 次。",
+        "快速版跳过 720p mini 并直接生成模型支持的 1080p final，不发送不存在的 1024p 参数。",
+        "无论选择哪种模式，都保留独立项目目录、原子账本、编码/SSIM、浏览器 QA、可移植验证与成本报告。"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "我第一次安装这个 skill，帮一家眼镜品牌做滚动 3D 网站。",
+      "expected_output": "先检查用户级 provider 配置；未配置时让用户选择豆包或 Higgsfield。豆包只在隐藏终端输入一次 API Key，Higgsfield 使用官方 CLI 一次 OAuth 登录；配置后再询问详细或快速版本。",
+      "files": [],
+      "expectations": [
+        "先运行 provider_config.py status；已有配置时不重复询问供应商或索取凭据。",
+        "豆包 key 只保存到权限 0600 的用户级凭据文件，不进入聊天、项目、日志或 skill 包。",
+        "Higgsfield 使用官方 higgsfield CLI 和 auth login，不伪造 API Key 流程或直连私有 API。",
+        "新项目把 provider 写入 world.json 和项目 marker；恢复或重试时不静默切换供应商。",
+        "Higgsfield 图片/视频分别路由到 Nano Banana Pro 与 Seedance 2.0 Mini/Full，并记录 credits。"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "架构 A 的 optics 图片已经重做，但旧的 optics 和后续视频都生成过。请安全恢复，不允许新图配旧视频。",
+      "expected_output": "先用 retry --explain 展示依赖范围，再归档 optics 起点后的 preview/final、编码、海报、QA、旧 dist 和报告，同时保留历史账本。",
+      "files": [],
+      "expectations": [
+        "识别架构 A 的真实尾帧传递关系，失效目标段及全部下游视频而不是只删 optics 文件。",
+        "保留上游无关视频和 usage-ledger 历史请求。",
+        "重新运行媒体、语义、浏览器和生产门禁。"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Higgsfield 模型最近升级过，先确认当前 schema 和 credits，再生成，不要等扣费后才发现参数失效。",
+      "expected_output": "doctor/preflight 在预算预留前检查登录、catalog、model schema 和 generate cost；报告区分 actual 与 estimated credits。",
+      "files": [],
+      "expectations": [
+        "实时 schema 缺少首帧、时长或分辨率能力时停止且账本不占槽。",
+        "能力报告按模型指纹缓存并支持 refresh。",
+        "成本报告不把 generate cost 的预估值伪装成实际扣费。"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "把旧版 scroll-world 项目升级并换成 chrome-futurism；最终必须证明双击和服务器打开都能滚动。",
+      "expected_output": "先 dry-run 再执行 schema v2 可逆迁移，写入主题 design；完成 file/http × 三视口浏览器证据并通过哈希绑定门禁。",
+      "files": [],
+      "expectations": [
+        "迁移前版本备份到 .work/migrations，不能静默破坏旧项目。",
+        "主题模板复制到 world.design，精确品牌文字使用可控叠加。",
+        "browser-report 缺失、失败或公开文件改变后过期时阻止生产构建。"
+      ]
+    }
+  ]
+}
