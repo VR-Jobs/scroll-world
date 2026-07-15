@@ -8,6 +8,14 @@
 
 ---
 
+## 🎬 演示 / Demo
+
+用本 skill 生成的 **XR COOL** 示例站（见 [`example/xr-cool-vr/`](example/xr-cool-vr/)）滚动演示 —— 点击封面在 GitHub 播放（1080p，有声）：
+
+[![XR COOL scroll-world demo — 点击播放](docs/demo-poster.jpg)](docs/demo.mp4)
+
+---
+
 ## ✨ 特性
 
 - **双供应商**：火山方舟豆包（Seedream / Seedance）或 Higgsfield，一套项目锁定一个 provider。
@@ -235,6 +243,7 @@ scroll-world/
 ├── references/             # 按需读取：pipeline / 供应商能力 / prompts / themes / quality / gotchas
 ├── assets/                 # 主题目录 + world.example.json
 ├── evals/  tests/          # 触发用例 + 单元测试
+├── docs/                   # README 媒体（demo.mp4 + 海报）
 └── example/                # 可直接测试的成品示例
     └── xr-cool-vr/         #   XR COOL 滚动 3D 落地页（双击 index.html 即测）
 ```
