@@ -10,9 +10,11 @@
 
 ## 🎬 演示 / Demo
 
-用本 skill 生成的 **XR COOL** 示例站（见 [`example/xr-cool-vr/`](example/xr-cool-vr/)）滚动演示 —— 点击封面在 GitHub 播放（1080p，有声）：
+**▶ [在线预览示例站](https://vr-jobs.github.io/scroll-world/example/xr-cool-vr/)** ｜ 点击封面播放滚动演示视频（1080p，有声）：
 
-[![XR COOL scroll-world demo — 点击播放](docs/demo-poster.jpg)](docs/demo.mp4)
+[![XR COOL scroll-world demo — 点击播放](docs/demo-poster.jpg)](https://vr-jobs.github.io/scroll-world/docs/demo.mp4)
+
+> 由本 skill 生成的 **XR COOL** 示例站（源码见 [`example/xr-cool-vr/`](example/xr-cool-vr/)）。「在线预览」可直接点开体验，无需 clone。
 
 ---
 
